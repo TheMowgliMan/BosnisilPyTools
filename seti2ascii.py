@@ -94,5 +94,49 @@ class seti2ascii:
             "\u03b4", # small delta
             "\u03c2", # small final sigma
             "\u03a3", # big sigma
-
-
+            "z",
+            "Z",
+            "\u03b6", # small zeta
+            "k",
+            "K",
+            "\u03ba", # small kappa
+            "g",
+            "G",
+            "j",
+            "J",
+            "x",
+            "X",
+            "\u03c7", # small chi
+            "h",
+            "H",
+            "r",
+            "R",
+            "\u03c1", # small rho
+            "l",
+            "L",
+            "\u03c8", # small psi
+            "M",
+            "N",
+            "m",
+            "n",
+            "a",
+            "A",
+            "e",
+            "E",
+            "\u03b5", # small epsilon
+            "i",
+            "I",
+            "\u03b9", # small iota
+            "o",
+            "O",
+            "\u03c9", # small omega
+            "u",
+            "U",
+            "\u03c5", # small upsilon
+            "\u00e7", # latin small letter c with cedilla
+            "\u03b7", # small eta
+            "y",
+            "\u00e6", # latin small letter ae
+            "c",
+            "C",
+            "\u00c7", # latin capital letter c with cedilla
