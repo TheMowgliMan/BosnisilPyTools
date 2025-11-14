@@ -140,3 +140,78 @@ class seti2ascii:
             "c",
             "C",
             "\u00c7", # latin capital letter c with cedilla
+            "\u0294", # latin letter glottal stop
+            "\u03b1", # greek small letter alpha
+            "\u03b3", # greek small letter gamma
+            "\u0393", # greek capital letter gamma
+            "\u0394", # greek capital letter delta
+            "\u03b8", # greek small letter theta
+            "\u0398", # greek capital letter theta
+            "\u0399", # greek capital letter iota
+            "\u03bb", # greek small letter lambda
+            "\u039b", # greek capital letter lambda
+            "\u03bc", # greek small letter mu
+            "\u03bd", # greek small letter nu
+            "\u03be", # greek small letter xi
+            "\u039e", # greek capital letter xi
+            "\u03a0", # greek capital letter pi
+            "\u03a1", # greek capital letter rho
+            "\u03a6", # greek capital letter phi
+            "\u03a8", # greek capital letter psi
+            "\u03a9", # greek capital letter omega
+            "q",
+            "Q",
+            "W",
+            "w",
+            "Y",
+            "", # MOVE UP
+            "", # MOVE DOWN
+            "", # MOVE LEFT
+            "", # MOVE RIGHT
+            "", # SHIFT
+            "", # FUNC 1
+            "", # FUNC 2
+            "", # FUNC 3
+            "", # FUNC 4
+            "", # ALTERNATE
+            "", # COMMAND
+            "", # EMPHASIZE
+            "", # FUNC 5
+            "", # FUNC 6
+            "", # FUNC 7
+            ""] #FUNC 8
+    # Greek-English unicode characters for effectively identical characters
+    engrequiv = {
+            "\u0391":"A",
+            "\u0392":"B",
+            "\u0395":"E",
+            "\u0396":"Z",
+            "\u0397":"H",
+            "\u039a":"K",
+            "\u039c":"M",
+            "\u039d":"N",
+            "\u039f":"O",
+            "\u03a4":"T",
+            "\u03a5":"Y",
+            "\u03a6":"X"
+        }
+    
+
+    # Converts SETI 1.0 codes to Unicode characters.
+    def seti_code_to_ascii(this, code, asserts_off=False):
+        if code < len(this.char):
+            # Binary stream is meaningless when converting single characters
+            return this.char[code]
+        elif not asserts_off:
+            raise ValueError("Invalid character code '" + str(code) + "'!")
+        
+    # Converts unicode to seti
+    def ascii_char_to_seti(this, char, asserts_off=False):
+        pass
+
+
+# Various tests.
+if __name__ == "__main__":
+    converter = seti2ascii()
+    for i in range(176):
+        print(converter.seti_code_to_ascii(i))
